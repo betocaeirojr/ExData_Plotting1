@@ -1,3 +1,5 @@
+setwd("/Users/acaeiro/Developer/Data Science Specialization/ExData_Plotting1")
+
 ## This first line will likely take a few seconds. Be patient!
 NEI <- readRDS("../exdata-data-NEI_data/summarySCC_PM25.rds")
 SCC <- readRDS("../exdata-data-NEI_data/Source_Classification_Code.rds")
@@ -22,6 +24,6 @@ qplot(year, Emissions, data=NEIBaltimore,
 
 # Fourth Plot
 scccode <- subset(SCC, EI.Sector=="Fuel Comb - Electric Generation - Coal", SCC)
-NEICoal <- subset(NEI, SCC = scccodes)
+NEICoal <- subset(NEI, SCC == scccode$SCC)
 qplot(year, Emissions, data=NEICoal, color = type)
 
