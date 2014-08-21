@@ -1,0 +1,309 @@
+install.packages(gsubfn)
+install.packages("gsubfn")
+install.packages("proto")
+library(sqldf)
+file <- "./quiz2quest2.csv"
+data <- read.csv(file)
+str(dat)
+str(data)
+acs <- read.csv(file)
+acs
+acs$pwgpt1
+acs
+qldf("select pwgtp1 from acs where AGEP < 50")
+sqldf("select pwgtp1 from acs where AGEP < 50")
+str(acs)
+sqldf("select distinct AGEP from acs")
+sqldf("select distinct AGEP from acs order by 1")
+con = url("http://biostat.jhsph.edu/~jleek/contact.html")
+htmlCode = readLines(con)
+close(con)
+htlmCode
+htmlCode
+htmlCode[10]
+htmlCode[20]
+htmlCode[30]
+htmlCode[100]
+length(htmlCode[10])
+htmlCode[10]
+str(htmlCode[10])
+nchar(htmlCode[10])
+nchar(htmlCode[20])
+nchar(htmlCode[30])
+nchar(htmlCode[100])
+?download.file
+?read.table()
+fileUR <- "https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for"
+download.file(fileURL, destfile="./quiz2quest5.for", method="curl")
+?read.data
+library(data.table)
+x <- read.fwf(#
+  file=url("http://www.cpc.ncep.noaa.gov/data/indices/wksst8110.for"),#
+  skip=4,#
+  widths=c(12, 7,4, 9,4, 9,4, 9,4))
+head(x)
+x[4]
+head(x)
+sum(x[4])
+?read.fwf
+x <- read.fwf(#
+  file="./quiz2quest5.for",#
+  skip=4,#
+  widths=c(12, 7,4, 9,4, 9,4, 9,4))
+sum(x[4])
+head(x)
+x[4]
+data <- read.table(file="./quiz5quest5.for",header=TRUE, sep=",")
+list.files()
+data <- read.table(file="./quiz2quest5.for",header=TRUE, sep=",")
+data
+data[[4]]
+sum(data[[4]])
+x <- read.fwf(#
+  file=url("http://www.cpc.ncep.noaa.gov/data/indices/wksst8110.for"),#
+  skip=4,#
+  widths=c(12, 7,4, 9,4, 9,4, 9,4))
+x <- read.fwf(#
+  file="./getdata-wksst8110.for"),#
+  skip=4,#
+  widths=c(10, 9,4, 9,4, 9,4, 9,4))
+getwd()
+list.files()
+x <- read.fwf(#
+  file="./getdata-wksst8110.for",#
+  skip=4,#
+  widths=c(10, 9,4, 9,4, 9,4, 9,4))
+sum(x[4])
+quit()
+install.packages('quantmod')
+library(quantmod)#
+amzn = getSymbols("AMZN",auto.assign=FALSE)#
+sampleTimes = index(amzn)
+head(amzn)
+str(amzn)
+rownames(amzn)
+table(amzn)
+str(amzn)
+sampleTimes
+str(sampleTimes)
+year(SampleTimes)
+years(SampleTimes)
+?years()
+Sys.Data
+Sys.Date()
+class(sampleTimes)
+year()
+years()
+length(sampleTimes)
+sampleTimes[1]
+is2012 = grep("^2012", sampleTimes[1])
+is2012
+is2007 = grep("^2007", sampleTimes[1])
+is2012
+is2007
+?grep
+grep("^2012", sampleTimes, value=FALSE)
+isYear2012 <- grep("^2012", sampleTimes, value=FALSE)
+length(isYear2012)
+format(sampleTimes, )
+months()
+weekdays(samp)
+weekdays(sampleTimes)
+sampleTimesInWeekDays <- weekdays(sampleTimes)
+isMonday <- grep("Monday", sampleTimesInWeekDays, value=FALSE)
+isMonday
+length(isMonday)
+is2012
+isYear[2012]
+isYear2012
+sampleTimes[isYear2012]
+weekdays(sampleTimes[isYear2012])
+grep("Monday", weekdays(sampleTimes[isYear2012]), value=FALSE)
+length(grep("Monday", weekdays(sampleTimes[isYear2012]), value=FALSE))
+?strptime()
+?plot
+?format.Date
+?format
+library(nlme)
+library(lattice)
+xplot(weigth ~ Time | Diet, BodyWeigth)
+xyplot(weigth ~ Time | Diet, BodyWeigth)
+xyplot(weigth ~ Time | Diet, BodyWeight)
+xyplot(weight ~ Time | Diet, BodyWeight)
+library(datasets)#
+data(airquality)
+airquality = transform(airquality, Month = factor(Month))#
+qplot(Wind, Ozone, data = airquality, facets = . ~ Month)
+library(ggplot2)
+airquality = transform(airquality, Month = factor(Month))#
+qplot(Wind, Ozone, data = airquality, facets = . ~ Month)
+qplot(Wind, Ozone, data = airquality)
+library(datasets)#
+data(airquality)
+qplot(Wind, Ozone, data = airquality, facets = . ~ factor(Month))
+?trellis.par.set()
+?ggplot()
+movies
+qplot(votes, rating, data = movies)
+qplot(votes, rating, data = movies, smooth = "loess")
+qplot(votes, rating, data = movies) + geom_smooth()
+qplot(votes, rating, data = movies) + stats_smooth("loess")
+qplot(votes, rating, data = movies, panel = panel.loess)
+qplot(votes, rating, data = movies) + stats_smooth("loess")
+qplot(votes, rating, data = movies)
+qplot(votes, rating, data = movies, panel = panel.loess)
+qplot(votes, rating, data = movies) + stats_smooth("loess")
+qplot(votes, rating, data = movies, smooth = "loess")
+qplot(votes, rating, data = movies) + geom_smooth()
+?lattice
+quit()
+setwd("/Users/acaeiro/Developer/Data Science Specialization/ExData_Plotting1")#
+#
+## This first line will likely take a few seconds. Be patient!#
+NEI <- readRDS("../exdata-data-NEI_data/summarySCC_PM25.rds")#
+SCC <- readRDS("../exdata-data-NEI_data/Source_Classification_Code.rds")
+grep("^(.*)[mM]ot(.*)", SCC$EI.Sector)
+grep("^(.*)[mM]ot(.*)", SCC$EI.Sector, value=TRUE)
+grep("^(.*)[mM]o(.*)", SCC$EI.Sector, value=TRUE)
+unique(grep("^(.*)[mM]o(.*)", SCC$EI.Sector, value=TRUE))
+subset(SCC, EI.Sector %in% unique(grep("^(.*)[mM]o(.*)", SCC$EI.Sector, value=TRUE)), SCC)
+subset(SCC, EI.Sector %in% unique(grep("^(.*)[mM]o(.*)", EI.Sector, value=TRUE)), SCC)
+mobileCodes <- subset(SCC, EI.Sector %in% unique(grep("^(.*)[mM]o(.*)", EI.Sector, value=TRUE)), SCC)
+NEIMobile <- subset(NEI, SCC == mobileCodes$SCC, c(Emissions, year))
+str(NEIMobile)
+NEIMobile <- subset(NEI, SCC == mobileCodes$SCC & fips=="24510", c(Emissions, year))
+str(NEIMobile)
+unique(grep("^(.*)[mM]o(.*)", SCC$SCC.Level.One, value=TRUE))
+unique(grep("^(.*)[mM]ob(.*)", SCC$SCC.Level.One, value=TRUE))
+mobileCodes <- subset(SCC, SCC.Level.One %in% unique(grep("^(.*)[mM]ob(.*)", SCC.Level.One, value=TRUE)), SCC)
+str(mobileCodes)
+NEIMobile <- subset(NEI, SCC == mobileCodes$SCC & fips=="24510", c(Emissions, year))
+str(NEIMobile)
+?grep
+mobileCodes1 <- subset(SCC, EI.Sector %in% unique(grep("^(.*)[mM]o(.*)", EI.Sector, value=TRUE)), SCC)#
+mobileCodes2 <- subset(SCC, SCC.Level.One %in% unique(grep("^(.*)[mM]ob(.*)", SCC.Level.One, value=TRUE)), SCC)#
+mobileCodes2 <- subset(SCC, SCC.Level.Two %in% unique(grep("^(.*)[mM]ob(.*)", SCC.Level.Two, value=TRUE)), SCC)#
+vehicleCodes1 <- subset(SCC, EI.Sector %in% unique(grep("^(.*)[vV]e(.*)", EI.Sector, value=TRUE)), SCC)#
+vehicleCodes2 <- subset(SCC, SCC.Level.One %in% unique(grep("^(.*)[vV]eh(.*)", SCC.Level.One, value=TRUE)), SCC)#
+vehicleCodes3 <- subset(SCC, SCC.Level.Two %in% unique(grep("^(.*)vV]eh(.*)", SCC.Level.Two, value=TRUE)), SCC)
+rbind(mobileCodes1, mobileCodes2, mobileCodes3, vehicleCodes1, vehicleCodes2, vehicleCodes3)
+mobileCodes1 <- subset(SCC, EI.Sector %in% unique(grep("^(.*)[mM]o(.*)", EI.Sector, value=TRUE)), SCC)#
+mobileCodes2 <- subset(SCC, SCC.Level.One %in% unique(grep("^(.*)[mM]ob(.*)", SCC.Level.One, value=TRUE)), SCC)#
+mobileCodes3 <- subset(SCC, SCC.Level.Two %in% unique(grep("^(.*)[mM]ob(.*)", SCC.Level.Two, value=TRUE)), SCC)#
+vehicleCodes1 <- subset(SCC, EI.Sector %in% unique(grep("^(.*)[vV]e(.*)", EI.Sector, value=TRUE)), SCC)#
+vehicleCodes2 <- subset(SCC, SCC.Level.One %in% unique(grep("^(.*)[vV]eh(.*)", SCC.Level.One, value=TRUE)), SCC)#
+vehicleCodes3 <- subset(SCC, SCC.Level.Two %in% unique(grep("^(.*)vV]eh(.*)", SCC.Level.Two, value=TRUE)), SCC)#
+motorCodes1 <- subset(SCC, EI.Sector %in% unique(grep("^(.*)[mM]ot(.*)", EI.Sector, value=TRUE)), SCC)#
+motorCodes2 <- subset(SCC, SCC.Level.One %in% unique(grep("^(.*)[mM]ot(.*)", SCC.Level.One, value=TRUE)), SCC)#
+motorCodes3 <- subset(SCC, SCC.Level.Two %in% unique(grep("^(.*)[mM]ot(.*)", SCC.Level.Two, value=TRUE)), SCC)#
+sccCodes <- rbind(mobileCodes1, mobileCodes2, mobileCodes3, #
+                  vehicleCodes1, vehicleCodes2, vehicleCodes3, #
+                  motorCodes1, motorCodes2, motorCodes3)#
+uniqueSCCCodes <- unique(sccCodes)
+uniqueSCCCodes
+with(SCC, unique(grep("^(.*)[mM]o(.*)", EI.Sector, value=TRUE))
+)
+with(SCC, unique(grep("^(.*)[mM]o(.*)", SCC.Level.One, value=TRUE)))
+with(SCC, unique(grep("^(.*)[mM]ob(.*)", SCC.Level.One, value=TRUE)))
+with(SCC, unique(grep("^(.*)[mM]ob(.*)", SCC.Level.Two, value=TRUE)))
+with(SCC, unique(grep("^(.*)[mM]ot(.*)", EI.Sector, value=TRUE)))
+with(SCC, unique(grep("^(.*)[mM]ot(.*)", SCC.Level.One, value=TRUE)))
+with(SCC, unique(grep("^(.*)[mM]ot(.*)", SCC.Level.Two, value=TRUE)))
+with(SCC, unique(grep("^(.*)[vV]eh(.*)", EI.Sector, value=TRUE)))
+with(SCC, unique(grep("^(.*)[vV]eh(.*)", SCC.Level.One, value=TRUE)))
+with(SCC, unique(grep("^(.*)[vV]eh(.*)", SCC.Level.Two, value=TRUE)))
+mobileCodes1 <- subset(SCC, EI.Sector %in% unique(grep("^(.*)[mM]ob(.*)", EI.Sector, value=TRUE)), SCC)#
+mobileCodes2 <- subset(SCC, SCC.Level.One %in% unique(grep("^(.*)[mM]ob(.*)", SCC.Level.One, value=TRUE)), SCC)#
+mobileCodes3 <- subset(SCC, SCC.Level.Two %in% unique(grep("^(.*)[mM]ob(.*)", SCC.Level.Two, value=TRUE)), SCC)#
+vehicleCodes1 <- subset(SCC, EI.Sector %in% unique(grep("^(.*)[vV]e(.*)", EI.Sector, value=TRUE)), SCC)#
+vehicleCodes2 <- subset(SCC, SCC.Level.One %in% unique(grep("^(.*)[vV]eh(.*)", SCC.Level.One, value=TRUE)), SCC)#
+vehicleCodes3 <- subset(SCC, SCC.Level.Two %in% unique(grep("^(.*)vV]eh(.*)", SCC.Level.Two, value=TRUE)), SCC)#
+motorCodes1 <- subset(SCC, EI.Sector %in% unique(grep("^(.*)[mM]otor(.*)", EI.Sector, value=TRUE)), SCC)#
+motorCodes2 <- subset(SCC, SCC.Level.One %in% unique(grep("^(.*)[mM]otor(.*)", SCC.Level.One, value=TRUE)), SCC)#
+motorCodes3 <- subset(SCC, SCC.Level.Two %in% unique(grep("^(.*)[mM]otor(.*)", SCC.Level.Two, value=TRUE)), SCC)#
+sccCodes <- rbind(mobileCodes1, mobileCodes2, mobileCodes3, #
+                  vehicleCodes1, vehicleCodes2, vehicleCodes3, #
+                  motorCodes1, motorCodes2, motorCodes3)#
+uniqueSCCCodes <- unique(sccCodes)
+neiBaltimore <- subset(NEI, SCC == uniqueSCCCodes, c(Emissions, year, type))
+str(neiBaltimore)
+neiBaltimore <- subset(NEI, SCC == uniqueSCCCodes & fips == "24510", c(Emissions, year, type))
+str(neiBaltimore)
+NEIBaltimore <- subset(NEI, fips=="24510")
+str(NEIBaltimore)
+subset(NEIBaltimore, SCC == uniqueSCCCodes)
+subset(NEIBaltimore, SCC %in% uniqueSCCCodes)
+subset(NEIBaltimore, SCC == as.vector(uniqueSCCCodes)))
+subset(NEIBaltimore, SCC == as.vector(uniqueSCCCodes))
+NEILA <- subset(NEI, fips=="06037")
+str(NEILA)
+subset(NEILA, SCC == uniqueSCCCodes)
+str(uniqueSCCCodes)
+subset(NEILA, SCC == uniqueSCCCodes$SCC)
+with(SCC, grep("^Mobile(*.)road(*.)Vehicles$", EI.sector, value=TRUE)
+)
+with(SCC, grep("^Mobile(*.)road(*.)Vehicles$", EI.Sector, value=TRUE))
+with(SCC, grep("^Mobile(*.)Vehicles$", EI.Sector, value=TRUE))
+with(SCC, grep("Vehicles$", EI.Sector, value=TRUE))
+unique(with(SCC, grep("Vehicles$", EI.Sector, value=TRUE)))
+sccStrings <- unique(with(SCC, grep("Vehicles$", EI.Sector, value=TRUE)))
+sccCodes <- subset(SCC, EI.Sector == sccStrings, SCC)
+sccCodes
+lenght(sccStrings)
+length(sccStrings)
+sccStrings <- with(SCC, grep("Vehicles$", EI.Sector, value=TRUE))
+length(sccStrings)
+sccCodes <- subset(SCC, EI.Sector == sccStrings, SCC)
+length(sccCodes)
+str(sccStrigns)
+str(sccStrings)
+sccCodes <- subset(SCC, EI.Sector &in% sccStrings, SCC)
+sccCodes <- subset(SCC, EI.Sector %in% sccStrings, SCC)
+str(sccCodes)
+NEIBalVeh <- subset(NEIBaltimore, SCC == sccCodes$SCC)
+str(NEIBalVeh)
+SCC$SCC[grep("Vehicles$",SCC$EI.Sector)]
+head(SCC$SCC[grep("Vehicles$",SCC$EI.Sector)])
+subset(NEI, fips=="24510" & SCC == SCC$SCC[grep("Vehicles$",SCC$EI.Sector)] )
+codes <- SCC$SCC[grep("Vehicles$",SCC$EI.Sector)]
+str(codes)
+clear()
+setwd("/Users/acaeiro/Developer/Data Science Specialization/ExData_Plotting1")#
+#
+## This first line will likely take a few seconds. Be patient!#
+NEI <- readRDS("../exdata-data-NEI_data/summarySCC_PM25.rds")#
+SCC <- readRDS("../exdata-data-NEI_data/Source_Classification_Code.rds")
+mobileVehicles <- subset(SCC, EI.Sector == grep("Vehicles$", SCC$EI.Sector, value=TRUE), SCC)
+mobileVehicles <- subset(SCC, EI.Sector == grep("Vehicles$", EI.Sector, value=TRUE), SCC)
+mobileVehicles
+NEI24510 <- subset(NEI, fips == "24510"& SCC == mobileVehicles$SCC)
+str(NEI24510)
+NEI24510 <- subset(NEI, fips == "24510")
+str(NEI24510)
+intersect(NEI24510$SCC, mobileVehicles$SCC)
+NEI24510Vehicles <- subset(NEI24510, SCC in mobileVehicles$SCC)
+NEI24510Vehicles <- subset(NEI24510, SCC %in% mobileVehicles$SCC)
+str(NEI24510Vehicles)
+qplot(year, log10(Emissions), data=NEI24510Vehicles, title="Motor Vehicles Related Sources in Baltimore")
+library(ggplot2)
+qplot(year, log10(Emissions), data=NEI24510Vehicles, title="Motor Vehicles Related Sources in Baltimore")
+qplot(year, Emissions, data=NEI24510Vehicles, title="Motor Vehicles Related Sources in Baltimore")
+with(NEI24510Vehicles, plot(year, Emissions))
+NEI24510Vehicles <- subset(NEI24510, SCC %in% mobileVehicles$SCC, c(Emissions, year))
+with(NEI24510Vehicles, plot(year, Emissions))
+head(NEI24510$year)
+NEI24510$year
+NEI24510Vehicles$year
+NEI24510Vehicle$State == "Baltimore"
+NEI24510Vehicle$State <- "Baltimore"
+NEI24510Vehicles$State <- "Baltimore"
+NEI24510Vehicles
+NEI06037 <- subset(NEI, fips == "06037")#
+NEI06037Vehicles <- subset(NEI06037, SCC %in% mobileVehicles$SCC, c(Emissions, year))
+NEI06037Vehicles$State <- "Los Angeles"
+compBalt_LA <- rbind(NEI24510Vehicles, NEI06037Vehicles)
+qplot(year, Emissions, data=compBalt_LA, facets = . ~ State)
+qplot(year, Emissions, data=compBalt_LA, facets = State ~ .)
+qplot(year, Emissions, data=compBalt_LA, color = State)
+exit
+quit()
