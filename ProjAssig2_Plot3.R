@@ -7,7 +7,7 @@ NEI <- readRDS("../exdata-data-NEI_data/summarySCC_PM25.rds")
 SCC <- readRDS("../exdata-data-NEI_data/Source_Classification_Code.rds")
 
 # Copying to PNG File
-png("./ProjAssig2_Plot3.png", width=480, height=480)
+png("./ProjAssig2_Plot3.png", width=800, height=600)
 
 NEIBaltimore <- subset(NEI, fips == "24510", c(Emissions, year, type))
 qplot(year, Emissions, data=NEIBaltimore, 

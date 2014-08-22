@@ -7,7 +7,7 @@ NEI <- readRDS("../exdata-data-NEI_data/summarySCC_PM25.rds")
 SCC <- readRDS("../exdata-data-NEI_data/Source_Classification_Code.rds")
 
 # Copying to PNG File
-png("./ProjAssig2_Plot5.png", width=480, height=480)
+png("./ProjAssig2_Plot5.png", width=800, height=600)
 
 #Fifth Plot
 mobileVehicles <- subset(SCC, EI.Sector == grep("Vehicles$", EI.Sector, value=TRUE), SCC)
